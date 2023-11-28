@@ -158,4 +158,8 @@
     .info {
         margin-top: 55px;
     }
+
+    .info__left-list {
+        display: none;
+    }
 }
