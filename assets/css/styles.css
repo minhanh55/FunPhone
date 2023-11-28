@@ -1,0 +1,408 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #10375c;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Roboto", sans-serif;
+}
+
+main {
+    margin-top: 70px;
+    padding: 10px 0;
+    background-color: #efefef;
+}
+
+/* Common */
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Roboto", sans-serif;
+}
+
+input,
+textarea,
+select,
+button {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.section__heading {
+    position: relative;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3a3a3a;
+}
+
+.section__heading::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    left: -10px;
+    width: 3px;
+    height: 100%;
+    background-color: #3a3a3a;
+}
+
+/* Search */
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 4.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: 0.3s ease;
+}
+
+.input::placeholder {
+    color: #9e9ea7;
+}
+
+.input:focus,
+input:hover {
+    outline: none;
+    border-color: rgba(234, 76, 137, 0.4);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+}
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 3rem;
+    height: 2.1rem;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    background-color: #d70018;
+    top: 0;
+    z-index: 1000;
+}
+
+.header__content {
+    padding-top: 5px;
+}
+
+.logo {
+    text-align: center;
+    font-size: 25px;
+}
+
+.logo a {
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+}
+.nav-item {
+    padding: 0 25px;
+    font-weight: 500;
+    font-size: 14px;
+}
+.service {
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+}
+.input-group input {
+    font-size: 13px;
+    line-height: 30px;
+}
+.icon-search {
+    width: 30px;
+    color: red;
+}
+
+.subheader {
+    font-size: 13px;
+    color: #fff;
+    text-decoration: none;
+    text-wrap: nowrap;
+}
+
+.subheader:hover {
+    color: #fff;
+}
+
+.header__item {
+    display: flex;
+    align-items: center;
+}
+
+.header__item:hover {
+    cursor: pointer;
+    --tw-bg-opacity: 1;
+    background-color: rgb(231 51 72 / var(--tw-bg-opacity));
+    border-radius: 5px;
+}
+
+/* Brand */
+.brand {
+    margin-top: 20px;
+}
+
+.brand__inner {
+    background-color: #f7f7f7;
+}
+
+.brand__group-logo {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.brand__img {
+    width: 125px;
+    border: 1px solid #ccc;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.brand__img:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 35%);
+}
+
+/* Fix phone */
+.fix-phone__inner {
+    background-color: #fff;
+    padding-bottom: 20px;
+}
+
+.fix-phone__btn {
+    color: rgb(119, 119, 119);
+    font-size: 1.2rem;
+    line-height: 24px;
+    padding: 0 8px;
+    border-radius: 99px;
+    background-color: #e7e7e7;
+    outline: none;
+    border: none;
+    margin-left: 20px;
+}
+
+.product__list {
+    margin-top: 10px;
+    padding: 0 5px;
+}
+
+.product__item {
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 5px;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.1),
+        0 2px 6px 2px rgba(60, 64, 67, 0.15);
+    cursor: pointer;
+}
+
+.product__item:hover {
+}
+
+.product__media-img {
+    width: 210px;
+    height: 210px;
+    object-fit: cover;
+}
+
+.product__media-promotion {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.product__info {
+    color: #444444;
+    font-size: 1.4rem;
+    text-align: start;
+}
+
+.product__info h3 {
+    margin-top: 25px;
+    height: 45px;
+}
+
+.product__price {
+    margin: 8px 0;
+    color: #d70018;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.product__price span {
+    margin-left: 10px;
+    text-decoration: line-through;
+    color: #707070;
+    font-size: 1.3rem;
+}
+
+.product__desc {
+    padding: 5px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #222;
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 5px;
+}
+
+.product__media-note p {
+    display: inline-block;
+    position: absolute;
+    color: #fff;
+    margin-bottom: 2px;
+    padding: 1px 5px;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.product__media-note p:first-child {
+    left: 10px;
+    top: 185px;
+    background: #ea9d02;
+}
+
+.product__media-note p:last-child {
+    left: 10px;
+    top: 210px;
+    background: #e31e41;
+}
+
+/* Laptop */
+.fix-laptop {
+    margin-top: 10px;
+}
+
+/* Features */
+.features {
+    margin-top: 10px;
+}
+
+.features__list {
+    text-align: center;
+}
+
+.features__img {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.features__item {
+    padding: 0 20px;
+}
+
+.features__title {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.features__desc {
+    font-size: 1.5rem;
+    text-align: justify;
+    line-height: 1.5;
+    color: #3a3a3a;
+}
+
+/* Footer */
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul > li > a {
+    text-decoration: none;
+    color: gray;
+}
+
+footer ul > li > a:hover {
+    color: rgb(212, 37, 37);
+    text-decoration: underline;
+}
+
+.colum1 > li {
+    color: gray;
+}
+
+.colum1 > li > a {
+    color: rgb(212, 37, 37);
+}
+
+.block1,
+.block2 {
+    background: lightgray;
+    padding: 6px;
+}
+
+.block1 > a,
+.block2 > a {
+    color: rgb(212, 37, 37);
+    font-style: italic;
+    font-size: medium;
+    font-weight: 650;
+}
+
+.block1 > a:hover,
+.block2 > a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.block1 {
+    margin-bottom: 2px;
+}
+
+.block2 {
+    margin-top: 2px;
+}
+
+.lastfooter {
+    color: gray;
+    font-weight: 300;
+    font-size: small;
+}

@@ -1,0 +1,161 @@
+/* PC */
+@media screen and (min-width: 992px) {
+    .header-mobile {
+        display: none;
+    }
+}
+
+/* Tablet & Mobile */
+@media screen and (max-width: 991px) {
+    .brand__group-logo {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .brand__img {
+        height: 50px;
+    }
+
+    .offset-0 {
+        margin-left: 0;
+    }
+
+    .responsivve-none {
+        display: none;
+    }
+
+    .features__img {
+        border: 2px solid red;
+        border-radius: 50%;
+    }
+}
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .header__content {
+        margin-left: -30px;
+    }
+
+    .header-icon {
+        font-size: 20px;
+    }
+
+    .header__item,
+    .subheader {
+        padding-right: 11px;
+        font-size: 12px;
+    }
+
+    .subheader {
+        margin-left: 5px;
+    }
+
+    .features__title {
+        text-wrap: nowrap;
+        font-size: 1.3rem;
+    }
+
+    .features__desc {
+        font-size: 1.2rem;
+    }
+
+    .header-mobile {
+        display: none;
+    }
+
+    .product__list {
+        padding-left: 8px;
+    }
+
+    .product__item {
+        width: 31.5%;
+    }
+
+    .product__price {
+        margin-top: 15px;
+    }
+
+    .nav-breadcrumb {
+        padding-left: 55px;
+    }
+
+    .groupbtn__cart .fa-shopping-cart {
+        font-size: 2em !important;
+    }
+
+    .rate {
+        width: 85%;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    .header-pc {
+        display: none;
+    }
+
+    .header__content {
+        display: flex;
+        align-items: center;
+        margin-right: 5px;
+    }
+
+    .brand__img {
+        width: 70px;
+        object-fit: contain;
+        height: 40px;
+    }
+
+    .features__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .features__item {
+        width: 100%;
+        padding: 0;
+    }
+
+    .features__img {
+        width: 90px;
+    }
+
+    .mobile-none {
+        display: none;
+    }
+
+    .product__item {
+        width: 47%;
+    }
+
+    .product__media-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .product__media-note p:first-child {
+        top: 111px;
+    }
+
+    .product__media-note p:last-child {
+        top: 135px;
+    }
+
+    .product__info {
+        margin-top: -17px;
+    }
+
+    textarea {
+        width: 20em;
+    }
+
+    .nav-breadcrumb {
+        top: 102px;
+        padding-left: 8px;
+        font-size: 11px;
+    }
+
+    .info {
+        margin-top: 55px;
+    }
+}

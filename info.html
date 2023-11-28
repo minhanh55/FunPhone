@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Phone</title>
+        <!-- Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Rest CSS -->
+        <link rel="stylesheet" href="./assets/css/reset.css" />
+        <!-- Bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+            crossorigin="anonymous"
+        />
+        <!-- Slick Slider -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+        />
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- CSS -->
+        <link rel="stylesheet" href="./assets/css/styles.css" />
+        <link rel="stylesheet" href="./assets/css/infoProduct.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
+        <!-- JS -->
+        <script src="./assets/js/main.js"></script>
+    </head>
+    <body>
+        <!-- Header PC & Tablet -->
+        <header class="header header-pc header-info">
+            <div class="container py-3">
+                <div class="row header__content">
+                    <div class="col-lg-3 col-2">
+                        <div class="logo">
+                            <a href="index.html">FunPhone</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-5">
+                        <div class="group">
+                            <svg
+                                class="icon"
+                                aria-hidden="true"
+                                viewBox="0 0 24 24"
+                            >
+                                <g>
+                                    <path
+                                        d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+                                    ></path>
+                                </g>
+                            </svg>
+                            <input
+                                placeholder="Bạn cần tìm gì?"
+                                type="search"
+                                class="input"
+                            />
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-5">
+                        <div class="row">
+                            <div class="col">
+                                <div class="row header__item">
+                                    <div class="col-3">
+                                        <div class="fs-1 text-light">
+                                            <i
+                                                class="fa fa-phone header-icon"
+                                            ></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-9">
+                                        <a href="#" class="subheader"
+                                            ><strong>0366634188</strong></a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row header__item">
+                                    <div class="col-3">
+                                        <div class="fs-1 text-light">
+                                            <i
+                                                class="fa fa-user header-icon"
+                                            ></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-9">
+                                        <a href="#" class="subheader"
+                                            ><strong>Đăng nhập</strong></a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row header__item">
+                                    <div class="col-3">
+                                        <div class="fs-1 text-light">
+                                            <i
+                                                class="fa fa-shopping-cart header-icon"
+                                            ></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-9">
+                                        <a href="#" class="subheader"
+                                            ><strong>Giỏ hàng</strong></a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Header Mobile -->
+        <header class="header header-mobile header-info">
+            <div class="container py-3">
+                <div class="row header__content">
+                    <div class="col-5">
+                        <div class="logo">
+                            <a href="index.html">FunPhone</a>
+                        </div>
+                    </div>
+                    <div class="col-7">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="row header__item">
+                                    <div class="col-3">
+                                        <div class="fs-1 text-light">
+                                            <i
+                                                class="fa fa-user header-icon"
+                                            ></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-9">
+                                        <a href="#" class="subheader"
+                                            ><strong>Đăng nhập</strong></a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="row header__item">
+                                    <div class="col-3">
+                                        <div class="fs-1 text-light">
+                                            <i
+                                                class="fa fa-shopping-cart header-icon"
+                                            ></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-9">
+                                        <a href="#" class="subheader"
+                                            ><strong>Giỏ hàng</strong></a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="group">
+                        <svg
+                            class="icon"
+                            aria-hidden="true"
+                            viewBox="0 0 24 24"
+                        >
+                            <g>
+                                <path
+                                    d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+                                ></path>
+                            </g>
+                        </svg>
+                        <input
+                            placeholder="Bạn cần tìm gì?"
+                            type="search"
+                            class="input"
+                        />
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav aria-label="breadcrumb" class="nav-breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="index.html">
+                        <i class="fa-solid fa-house-chimney-window"></i>
+                        Trang chủ
+                    </a>
+                </li>
+                <li
+                    class="breadcrumb-item active breadcrumb-name"
+                    aria-current="page "
+                >
+                    Data
+                </li>
+            </ol>
+        </nav>
+
+        <main>
+            <div class="container">
+                <div class="info info-product">
+                    <h1 class="info__heading">
+                        Kính lưng thay iPhone 14 Pro Max
+                    </h1>
+                    <div class="info__content row">
+                        <div class="info__left col-md-7">
+                            <div class="info__left-block">
+                                <img
+                                    src="./assets/img/kinh-lung-ip-14.jpg"
+                                    alt=""
+                                    class="info__left-image"
+                                />
+                            </div>
+                            <div class="info__left-list">
+                                <h2>THÔNG TIN CHI TIẾT</h2>
+                                <ul>
+                                    <li>Mã sản phẩm: AKB48</li>
+                                    <li>Xuất xứ: Trung Quốc</li>
+                                    <li>Cam kết chính hãng 100%</li>
+                                    <li>Chất liệu cao cấp</li>
+                                    <li>
+                                        Miễn phí đổi trả nếu có lỗi từ nhà sản
+                                        xuất, nhà cung cấp
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="info__right col-md-5">
+                            <h2 class="info__right-title">GIÁ KHUYẾN MÃI</h2>
+                            <div class="info__right-price product__price">
+                                1.290.000đ
+                            </div>
+                            <div class="info__right-timing">
+                                <h2>
+                                    <i
+                                        class="fa-regular fa-clock info__right-icon"
+                                    >
+                                    </i>
+                                    Thời gian hoàn thành dự kiến: 1 ngày
+                                </h2>
+                            </div>
+                            <div class="info__right-groupbtn row">
+                                <button
+                                    class="groupbtn__order col-lg-6 col-md-6 col"
+                                >
+                                    <i class="fa fa-calendar"></i> ĐẶT LỊCH SỬA
+                                    CHỮA
+                                </button>
+                                <button
+                                    class="groupbtn__cart col-lg-5 col-md-4 col"
+                                >
+                                    <i
+                                        class="fa fa-shopping-cart"
+                                        style="font-size: 3em"
+                                    ></i>
+                                    <br />Thêm vào giỏ
+                                </button>
+                            </div>
+                            <div class="info__right-promotion">
+                                <h2 class="promotion__title">
+                                    <i
+                                        class="fa-solid fa-gift"
+                                        style="color: #f19729"
+                                    ></i>
+                                    KHUYẾN MÃI
+                                </h2>
+
+                                <ul class="promotion__list">
+                                    <li>Giảm ngay 5% cho thành viên</li>
+                                    <li>Học sinh, sinh viên giảm 10%</li>
+                                    <li>Nhiều quà tặng hấp dẫn khác</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="info__product">
+                        <h2 class="info__product-title">THÔNG TIN NỔI BẬT</h2>
+                        <h3>
+                            Dịch vụ thay kính lưng iPhone 14 Pro Max chuyên
+                            nghiệp tại TP Hồ Chí Minh, Hà Nội
+                        </h3>
+                        <p>
+                            Dịch vụ thay kính lưng iPhone 14 Pro Max có gì khác
+                            biệt? Khi nào nên thay mặt sau điện thoại? Cần lưu ý
+                            những gì khi sửa chữa để đảm bảo máy không bị ảnh
+                            hưởng? Điện Thoại Vui sẽ chia sẻ đến bạn ngay sau
+                            đây
+                        </p>
+                        <span id="dots">...</span
+                        ><span id="more">
+                            <h3>Thay kính lưng iPhone là gì?</h3>
+                            <p>
+                                Trong quá trình sử dụng iPhone, việc va đập hoặc
+                                rơi vỡ là chuyện không tránh khỏi. Điều này dẫn
+                                đến mặt lưng bị hư hỏng. Hoặc cũng có thể do
+                                dùng ốp lưng quá lâu nhưng không vệ sinh khiến
+                                mặt lưng máy bị ố gây mất thẩm mỹ. Giải pháp hữu
+                                hiệu cho các vấn đề này là mang máy đi thay thế
+                                mặt kính lưng bị hỏng bằng kính mới.
+                            </p>
+                            <img
+                                src="./assets/img/thay-kinh-lung-14-promax1.jpg"
+                                class="center_image"
+                            />
+                            <h3>
+                                Thay kính lưng 14 Pro Max có ảnh hưởng gì không?
+                            </h3>
+                            <p>
+                                iPhone 14 Pro Max được trang bị tính năng chống
+                                nước khá tốt. Nó giúp điện thoại hạn chế bị lỗi
+                                khi tiếp xúc với nước. Khả năng kháng nước của
+                                máy sẽ phụ thuộc vào ron và lớp keo chống nước
+                                được kết dính giữa màn hình và sườn vỏ. Về tính
+                                năng sạc nhanh, mặt kính lưng với phần cảm biến
+                                sạc không dây là hai bộ phận tách biệt. Do đó,
+                                khi thay kính lưng iPhone sẽ không ảnh hưởng gì
+                                đến chức năng sạc nhanh tích hợp bên trong mặt
+                                kính.
+                            </p>
+                            <img
+                                src="./assets/img/thay-kinh-lung-14-promax4.jpg"
+                                class="center_image"
+                            />
+                            <p>
+                                Thay kính lưng chủ yếu là quá trình thủ công,
+                                yêu cầu các kỹ thuật viên phải có tay nghề cao
+                                và tỉ mỉ trong lúc sửa. Bên cạnh đó, lựa chọn
+                                trung tâm sửa chữa cũng là một yếu tố quan
+                                trọng. Có như vậy mới đảm bảo được các chức năng
+                                của thiết bị không bị ảnh hưởng.
+                            </p>
+                        </span>
+
+                        <div class="center">
+                            <button
+                                onclick="seeMore()"
+                                id="myBtn"
+                                class="button"
+                            >
+                                Xem thêm
+                            </button>
+                        </div>
+                    </div>
+                    <div class="info__content row">
+                        <div
+                            class="info__qa col-md-5"
+                            style="width: max-content"
+                        >
+                            <h2
+                                style="
+                                    font-weight: 700;
+                                    color: #d70018;
+                                    font-size: 20px;
+                                "
+                            >
+                                <i
+                                    class="fa-regular fa-circle-question"
+                                    style="color: #f5193a"
+                                ></i>
+                                HỎI VÀ ĐÁP
+                            </h2>
+                            <br />
+                            <textarea
+                                cols="70"
+                                rows="7"
+                                placeholder="Vui lòng để lại câu hỏi, chúng tôi sẽ cố gắng phản hồi sớm nhất"
+                            ></textarea>
+                            <br />
+                            <button
+                                style="
+                                    color: white;
+                                    background-color: #d70018;
+                                    border: none;
+                                "
+                            >
+                                <i class="fa-solid fa-paper-plane"></i> Gửi
+                            </button>
+                        </div>
+                        <div class="rate col-md-5">
+                            <h2
+                                style="
+                                    font-weight: 600;
+                                    font-size: 16px;
+                                    margin-bottom: 10px;
+                                "
+                            >
+                                ĐÁNH GIÁ VÀ NHẬN XÉT
+                            </h2>
+                            <div class="rating">
+                                <div class="star">1 ⭐</div>
+                                <div class="progress-bar"></div>
+                                <div class="count">0</div>
+                            </div>
+
+                            <div class="rating">
+                                <div class="star">2 ⭐</div>
+                                <div class="progress-bar"></div>
+                                <div class="count">0</div>
+                            </div>
+
+                            <div class="rating">
+                                <div class="star">3 ⭐</div>
+                                <div class="progress-bar"></div>
+                                <div class="count">0</div>
+                            </div>
+
+                            <div class="rating">
+                                <div class="star">4 ⭐</div>
+                                <div class="progress-bar"></div>
+                                <div class="count">0</div>
+                            </div>
+
+                            <div class="rating">
+                                <div class="star">5 ⭐</div>
+                                <div class="progress-bar"></div>
+                                <div class="count">0</div>
+                            </div>
+
+                            <p style="margin-bottom: 0">
+                                Hiện chưa có nhận xét nào. Hãy là người nhận xét
+                                đầu tiên.
+                            </p>
+                            <div class="center">
+                                <button
+                                    style="
+                                        color: white;
+                                        background-color: #d70018;
+                                        border: none;
+                                    "
+                                >
+                                    Gửi đánh giá
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer id="footer" class="footer bg-light pt-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>HỆ THỐNG CỬA HÀNG</h2>
+                        <ul class="colum1">
+                            <li>
+                                Tổng đài miễn phí:
+                                <a href="tel:0123456789">0123456789</a>
+                            </li>
+                            <li>
+                                Email:
+                                <a href="mailto:your-email@gmail.com"
+                                    >your-email@gmail.com</a
+                                >
+                            </li>
+                            <li>
+                                Thời gian phục vụ: <b>08:00 – 21:00</b> hàng
+                                ngày (cả Chủ nhật &amp; ngày lễ)
+                            </li>
+                            <li class="block1">
+                                <a href="#"
+                                    >Tìm đến cửa hàng FunPhone gần nhất</a
+                                >
+                            </li>
+                            <li class="block2">
+                                <a href="#">Dịch vụ cho khách hàng ở xa</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h2>THÔNG TIN HỖ TRỢ</h2>
+                        <ul id="" class="">
+                            <li id="" class="">
+                                <a href="#">Tin tức công nghệ</a>
+                            </li>
+                            <li><a href="#">Thủ thuật sửa chữa</a></li>
+                            <li><a href="#">Chính sách bảo hành</a></li>
+                            <li><a href="#">Liên hệ với chúng tôi</a></li>
+                            <li><a href="#">Khách hàng Doanh nghiệp</a></li>
+                            <li><a href="#">Kiểm tra bảo hành</a></li>
+                            <!-- <li style="display: none;"><a href="#">Kiểm tra bảo hành</a></li>
+                            <li style="display: none;"><a href="#">Chính sách bảo mật</a></li>
+                            <li style="display: none;"><a href="#">Chính sách sử dụng</a></li>
+                            <li style="display: none;"><a href="#">Quy định sao lưu dữ liệu</a></li>
+                            <li style="display: none;"><a href="#">Về việc lưu trữ thiết bị</a></li>
+                            <li class="devvn_last" style="display: block"><a href="javascript:void(0)">Xem thêm <span class="devvn_icon_down"></span></a></li> -->
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h2>KẾT NỐI VỚI CHÚNG TÔI</h2>
+                        <ul id="" class="">
+                            <li id="" class="">
+                                <a href="#">Sơ đồ Website</a>
+                            </li>
+                            <li id="" class=""><a href="#">Khuyến mại</a></li>
+                            <li id="" class=""><a href="#">Tuyển dụng</a></li>
+                            <li id="" class="">
+                                <a href="#">Dạy nghề sửa chữa</a>
+                            </li>
+                            <li id="" class="">
+                                <a href="#">Giới thiệu FunPhone</a>
+                            </li>
+                            <li id="" class="">
+                                <a href="#">Hợp tác kinh doanh</a>
+                            </li>
+                            <!-- <li id="" class="" style="display: none;"><a href="#">Hợp tác kinh doanh</a></li>
+                            <li id="" class="" style="display: none;"><a href="#">Dịch vụ nhận sửa Điện Thoại – Máy tính tại nhà</a></li>
+                            <li class="" style="display: block"><a href="javascript:void(0)">Xem thêm <span class="devvn_icon_down"></span></a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="hr container-fluid" />
+            <div class="container">
+                <div class="row lastfooter">
+                    <div
+                        class="col-md-12 absolute-footer light medium-text-center text-center"
+                    >
+                        Bản quyền 2021 - © Dịch vụ sửa chữa FunPhone - GPDKKD:
+                        xxx do sở KH &amp; ĐT TP.HCM cấp ngày xx/xx/xxxx
+                        <br />
+                        Địa chỉ: quận 1, TP Hồ Chí Minh - Điện thoại: 0123456789
+                        - Email: your-email@gmail.com
+                    </div>
+                </div>
+            </div>
+            <hr class="hr container-fluid" />
+        </footer>
+        <script src="./assets/js/product.js"></script>
+        <script src="./assets/js/main.js"></script>
+    </body>
+</html>
