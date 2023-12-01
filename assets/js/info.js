@@ -2,9 +2,7 @@
 var productName = localStorage.getItem("productName");
 var productImage = localStorage.getItem("productImage");
 var productPrice = localStorage.getItem("productPrice");
-var productPrice2 = productPrice.slice(0, productPrice.indexOf("₫"));
-productPrice2 = productPrice2.replace(/\n/g, "");
-productPrice2 = productPrice2.slice(36, productPrice2.length);
+var productPrice2 = productPrice.replace(/\n/g, "");
 
 var headingInfo = document.querySelector(".info__heading");
 headingInfo.innerText = productName;
@@ -16,7 +14,7 @@ var imgInfo = document.querySelector(".info__left-image");
 imgInfo.src = productImage;
 
 var priceInfo = document.querySelector(".info__right-price");
-priceInfo.innerHTML = productPrice;
+priceInfo.innerHTML = productPrice + "₫";
 
 // Thêm sản phẩm vào giỏ hàng
 var btnAddCart = document.querySelector(".groupbtn__cart");
@@ -54,5 +52,21 @@ btnAddCart.addEventListener("click", function () {
     localStorage.setItem("cart", JSON.stringify(cart));
 
     // conlog cart
-    console.log(cart);
+    // console.log(cart);
 });
+
+function seeMore() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+
+    if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Xem thêm";
+        moreText.style.display = "none";
+    } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Thu gọn";
+        moreText.style.display = "inline";
+    }
+}

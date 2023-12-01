@@ -280,3 +280,11 @@ main {
 .product-item div {
     margin-top: 5px;
 }
+
+#productImage {
+    margin-bottom: 20px;
+}
+
+#image {
+    height: 55px;
+}
