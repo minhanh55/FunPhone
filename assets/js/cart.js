@@ -4,7 +4,7 @@ var tbody = document.querySelector("tbody");
 var totalPrice = document.querySelector(".price-total");
 var total = 0;
 
-if (Object.keys(cart).length == 0 || cart == null) {
+if (cart == null || Object.keys(cart).length == 0) {
     document.querySelector(".price").style.display = "none";
     document.querySelector(".submit").innerText = "Giỏ hàng trống";
     table.innerHTML = `
