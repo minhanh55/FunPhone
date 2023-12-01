@@ -21,22 +21,3 @@ for (let i = 0; i < productItemLength; i++) {
         window.location.href = "info.html";
     });
 }
-
-//render ở trang info.html
-var productName = localStorage.getItem("productName");
-var productImage = localStorage.getItem("productImage");
-var productPrice = localStorage.getItem("productPrice");
-
-var headingInfo = document.querySelector(".info__heading");
-headingInfo.innerText = productName;
-
-var breadcrumbInfo = document.querySelector(".breadcrumb-name");
-breadcrumbInfo.innerText = productName;
-
-var imgInfo = document.querySelector(".info__left-image");
-imgInfo.src = productImage;
-
-var priceInfo = document.querySelector(".info__right-price");
-// var index = productPrice.indexOf("₫");
-// productPrice = productPrice.slice(0, index + 1);
-priceInfo.innerHTML = productPrice;
