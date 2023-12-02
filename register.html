@@ -37,10 +37,8 @@
         />
         <!-- CSS -->
         <link rel="stylesheet" href="./assets/css/styles.css" />
-        <link rel="stylesheet" href="./assets/css/infoProduct.css" />
+        <link rel="stylesheet" href="./assets/css/login.css" />
         <link rel="stylesheet" href="./assets/css/responsive.css" />
-        <!-- JS -->
-        <script src="./assets/js/main.js"></script>
     </head>
     <body>
         <!-- Header PC & Tablet -->
@@ -209,297 +207,72 @@
                 </div>
             </div>
         </header>
-
-        <nav aria-label="breadcrumb" class="nav-breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                    <a href="index.html">
-                        <i class="fa-solid fa-house-chimney-window"></i>
-                        Trang chủ
-                    </a>
-                </li>
-                <li
-                    class="breadcrumb-item active breadcrumb-name"
-                    aria-current="page "
-                >
-                    Data
-                </li>
-            </ol>
-        </nav>
-
         <main>
-            <section
-                class="search-result container fix-phone__inner py-3 px-5 d-none"
-            >
-                <h2 class="col-lg-3 section__heading">KẾT QUẢ TÌM KIẾM</h2>
-                <div class="row">
-                    <!-- <div class="row search-result__product col-3" id="smartphones-list">
-                        <div class="col-lg product__item col-md-4 col-6 my-3">
-                            <div class="product__media">
-                                <img
-                                    src="./assets/img/man_hinh_iphone7plus.jpg"
-                                    alt=""
-                                    class="product__media-img"
-                                />
-                                <span class="product__media-note">
-                                    <p>BẢO HÀNH 6 THÁNG</p>
-                                    <p>Sửa 1 giờ</p>
-                                </span>
-                                <div class="product__media-promotion">-10%</div>
-                            </div>
-                            <div class="product__info">
-                                <h3>Thay màn hình iPhone 7 Plus chính hãng Pisen V3</h3>
-                                <div class="product__price">
-                                    <span>1350000</span><span class="line-through">1500000</span>
-                                </div>
-                                <p class="product__desc">
-                                    <strong>Tặng áo mưa khi thay pin, màn hình Pisen số lượng có hạn</strong>
-                                </p>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-            </section>
-            <div class="container">
-                <div class="info info-product">
-                    <h1 class="info__heading">
-                        Kính lưng thay iPhone 14 Pro Max
-                    </h1>
-                    <div class="info__content row">
-                        <div class="info__left col-md-7">
-                            <div class="info__left-block">
-                                <img
-                                    src="./assets/img/kinh-lung-ip-14.jpg"
-                                    alt=""
-                                    class="info__left-image"
-                                />
-                            </div>
-                            <div class="info__left-list">
-                                <h2>THÔNG TIN CHI TIẾT</h2>
-                                <ul>
-                                    <li>Mã sản phẩm: AKB48</li>
-                                    <li>Xuất xứ: Trung Quốc</li>
-                                    <li>Cam kết chính hãng 100%</li>
-                                    <li>Chất liệu cao cấp</li>
-                                    <li>
-                                        Miễn phí đổi trả nếu có lỗi từ nhà sản
-                                        xuất, nhà cung cấp
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+            <section class="form_login form_register">
+                <form action="" method="POST" class="form" id="form-2">
+                    <h3 class="heading">Đăng ký thành viên</h3>
 
-                        <div class="info__right col-md-5">
-                            <h2 class="info__right-title">GIÁ KHUYẾN MÃI</h2>
-                            <div class="info__right-price product__price">
-                                1.290.000đ
-                            </div>
-                            <div class="info__right-timing">
-                                <h2>
-                                    <i
-                                        class="fa-regular fa-clock info__right-icon"
-                                    >
-                                    </i>
-                                    Thời gian hoàn thành dự kiến: 1 ngày
-                                </h2>
-                            </div>
-                            <div class="info__right-groupbtn row">
-                                <button
-                                    class="groupbtn__order col-lg-6 col-md-6 col"
-                                >
-                                    <i class="fa fa-calendar"></i> ĐẶT LỊCH SỬA
-                                    CHỮA
-                                </button>
-                                <button
-                                    class="groupbtn__cart col-lg-5 col-md-4 col"
-                                >
-                                    <i
-                                        class="fa fa-shopping-cart"
-                                        style="font-size: 3em"
-                                    ></i>
-                                    <br />Thêm vào giỏ
-                                </button>
-                            </div>
-                            <div class="info__right-promotion">
-                                <h2 class="promotion__title">
-                                    <i
-                                        class="fa-solid fa-gift"
-                                        style="color: #f19729"
-                                    ></i>
-                                    KHUYẾN MÃI
-                                </h2>
+                    <div class="spacer"></div>
 
-                                <ul class="promotion__list">
-                                    <li>Giảm ngay 5% cho thành viên</li>
-                                    <li>Học sinh, sinh viên giảm 10%</li>
-                                    <li>Nhiều quà tặng hấp dẫn khác</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <hr />
-                    <div class="info__product">
-                        <h2 class="info__product-title">THÔNG TIN NỔI BẬT</h2>
-                        <h3>
-                            Dịch vụ thay kính lưng iPhone 14 Pro Max chuyên
-                            nghiệp tại TP Hồ Chí Minh, Hà Nội
-                        </h3>
-                        <p>
-                            Dịch vụ thay kính lưng iPhone 14 Pro Max có gì khác
-                            biệt? Khi nào nên thay mặt sau điện thoại? Cần lưu ý
-                            những gì khi sửa chữa để đảm bảo máy không bị ảnh
-                            hưởng? Điện Thoại Vui sẽ chia sẻ đến bạn ngay sau
-                            đây
-                        </p>
-                        <span id="dots">...</span
-                        ><span id="more">
-                            <h3>Thay kính lưng iPhone là gì?</h3>
-                            <p>
-                                Trong quá trình sử dụng iPhone, việc va đập hoặc
-                                rơi vỡ là chuyện không tránh khỏi. Điều này dẫn
-                                đến mặt lưng bị hư hỏng. Hoặc cũng có thể do
-                                dùng ốp lưng quá lâu nhưng không vệ sinh khiến
-                                mặt lưng máy bị ố gây mất thẩm mỹ. Giải pháp hữu
-                                hiệu cho các vấn đề này là mang máy đi thay thế
-                                mặt kính lưng bị hỏng bằng kính mới.
-                            </p>
-                            <img
-                                src="./assets/img/thay-kinh-lung-14-promax1.jpg"
-                                class="center_image"
-                            />
-                            <h3>
-                                Thay kính lưng 14 Pro Max có ảnh hưởng gì không?
-                            </h3>
-                            <p>
-                                iPhone 14 Pro Max được trang bị tính năng chống
-                                nước khá tốt. Nó giúp điện thoại hạn chế bị lỗi
-                                khi tiếp xúc với nước. Khả năng kháng nước của
-                                máy sẽ phụ thuộc vào ron và lớp keo chống nước
-                                được kết dính giữa màn hình và sườn vỏ. Về tính
-                                năng sạc nhanh, mặt kính lưng với phần cảm biến
-                                sạc không dây là hai bộ phận tách biệt. Do đó,
-                                khi thay kính lưng iPhone sẽ không ảnh hưởng gì
-                                đến chức năng sạc nhanh tích hợp bên trong mặt
-                                kính.
-                            </p>
-                            <img
-                                src="./assets/img/thay-kinh-lung-14-promax4.jpg"
-                                class="center_image"
-                            />
-                            <p>
-                                Thay kính lưng chủ yếu là quá trình thủ công,
-                                yêu cầu các kỹ thuật viên phải có tay nghề cao
-                                và tỉ mỉ trong lúc sửa. Bên cạnh đó, lựa chọn
-                                trung tâm sửa chữa cũng là một yếu tố quan
-                                trọng. Có như vậy mới đảm bảo được các chức năng
-                                của thiết bị không bị ảnh hưởng.
-                            </p>
-                        </span>
-
-                        <div class="center">
-                            <button
-                                onclick="seeMore()"
-                                id="myBtn"
-                                class="button"
-                            >
-                                Xem thêm
-                            </button>
-                        </div>
-                    </div>
-                    <div class="info__content row">
-                        <div
-                            class="info__qa col-md-5"
-                            style="width: max-content"
+                    <div class="form-group">
+                        <label for="fullname" class="form-label"
+                            >Tên đầy đủ</label
                         >
-                            <h2
-                                style="
-                                    font-weight: 700;
-                                    color: #d70018;
-                                    font-size: 20px;
-                                "
-                            >
-                                <i
-                                    class="fa-regular fa-circle-question"
-                                    style="color: #f5193a"
-                                ></i>
-                                HỎI VÀ ĐÁP
-                            </h2>
-                            <br />
-                            <textarea
-                                cols="70"
-                                rows="7"
-                                placeholder="Vui lòng để lại câu hỏi, chúng tôi sẽ cố gắng phản hồi sớm nhất"
-                            ></textarea>
-                            <br />
-                            <button
-                                style="
-                                    color: white;
-                                    background-color: #d70018;
-                                    border: none;
-                                "
-                            >
-                                <i class="fa-solid fa-paper-plane"></i> Gửi
-                            </button>
-                        </div>
-                        <div class="rate col-md-5">
-                            <h2
-                                style="
-                                    font-weight: 600;
-                                    font-size: 16px;
-                                    margin-bottom: 10px;
-                                "
-                            >
-                                ĐÁNH GIÁ VÀ NHẬN XÉT
-                            </h2>
-                            <div class="rating">
-                                <div class="star">1 ⭐</div>
-                                <div class="progress-bar"></div>
-                                <div class="count">0</div>
-                            </div>
-
-                            <div class="rating">
-                                <div class="star">2 ⭐</div>
-                                <div class="progress-bar"></div>
-                                <div class="count">0</div>
-                            </div>
-
-                            <div class="rating">
-                                <div class="star">3 ⭐</div>
-                                <div class="progress-bar"></div>
-                                <div class="count">0</div>
-                            </div>
-
-                            <div class="rating">
-                                <div class="star">4 ⭐</div>
-                                <div class="progress-bar"></div>
-                                <div class="count">0</div>
-                            </div>
-
-                            <div class="rating">
-                                <div class="star">5 ⭐</div>
-                                <div class="progress-bar"></div>
-                                <div class="count">0</div>
-                            </div>
-
-                            <p style="margin-bottom: 0">
-                                Hiện chưa có nhận xét nào. Hãy là người nhận xét
-                                đầu tiên.
-                            </p>
-                            <div class="center">
-                                <button
-                                    style="
-                                        color: white;
-                                        background-color: #d70018;
-                                        border: none;
-                                    "
-                                >
-                                    Gửi đánh giá
-                                </button>
-                            </div>
-                        </div>
+                        <input
+                            id="fullname"
+                            name="fullname"
+                            type="text"
+                            placeholder="VD: Nguyễn Văn A"
+                            class="form-control"
+                        />
+                        <span class="form-message"></span>
                     </div>
-                </div>
-            </div>
+
+                    <div class="form-group">
+                        <label for="username" class="form-label"
+                            >Tên đăng nhập</label
+                        >
+                        <input
+                            id="username"
+                            name="username"
+                            type="text"
+                            placeholder="VD: funphone1"
+                            class="form-control"
+                        />
+                        <span class="form-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label"
+                            >Mật khẩu</label
+                        >
+                        <input
+                            id="password"
+                            name="password"
+                            type="password"
+                            placeholder="Nhập mật khẩu"
+                            class="form-control"
+                        />
+                        <span class="form-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password_confirmation" class="form-label"
+                            >Nhập lại mật khẩu</label
+                        >
+                        <input
+                            id="password_confirmation"
+                            name="password_confirmation"
+                            placeholder="Nhập lại mật khẩu"
+                            type="password"
+                            class="form-control"
+                        />
+                        <span class="form-message"></span>
+                    </div>
+
+                    <button class="form-submit">Đăng ký</button>
+                </form>
+            </section>
         </main>
         <footer id="footer" class="footer bg-light pt-3">
             <div class="container">
@@ -590,8 +363,66 @@
             </div>
             <hr class="hr container-fluid" />
         </footer>
-        <script src="./assets/js/info.js"></script>
-        <script src="./assets/js/search.js"></script>
+        <script
+            type="text/javascript"
+            src="https://code.jquery.com/jquery-1.11.0.min.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+        ></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Mong muốn của chúng ta
+                Validator({
+                    form: "#form-2",
+                    formGroupSelector: ".form-group",
+                    errorSelector: ".form-message",
+                    rules: [
+                        Validator.isRequired(
+                            "#fullname",
+                            "Vui lòng nhập tên đầy đủ của bạn"
+                        ),
+                        Validator.minLength("#username", 5),
+                        Validator.minLength("#password", 5),
+                        Validator.isRequired("#password_confirmation"),
+                        Validator.isConfirmed(
+                            "#password_confirmation",
+                            function () {
+                                return document.querySelector(
+                                    "#form-2 #password"
+                                ).value;
+                            },
+                            "Mật khẩu nhập lại không chính xác"
+                        ),
+                    ],
+                    onSubmit: function (data) {
+                        // lấy từ form ra
+                        var user = {
+                            account: data.username,
+                            password: data.password,
+                            isAdmin: false,
+                        };
+                        console.log(user);
+                        // lưu vào local storage, nếu chưa có thì tạo mới
+                        var users = JSON.parse(localStorage.getItem("users"));
+                        if (!users) {
+                            users = [];
+                        }
+                        users.push(user);
+                        localStorage.setItem("users", JSON.stringify(users));
+                        alert("Đăng ký thành công");
+                        window.location.href = "login.html";
+                    },
+                });
+            });
+        </script>
+        <!-- JS -->
+        <script src="./assets/js/rangBuoc.js"></script>
         <script src="./assets/js/user.js"></script>
     </body>
 </html>

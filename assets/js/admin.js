@@ -1,3 +1,16 @@
+// Kiểm tra đăng nhập
+
+if (localStorage.getItem("tokenLogin")) {
+    const user = JSON.parse(localStorage.getItem("tokenLogin"));
+    if (user.isAdmin !== true) {
+        alert("Bạn không có quyền truy cập vào trang này!");
+        window.location.href = "../index.html";
+    }
+} else {
+    alert("Bạn chưa đăng nhập!");
+    window.location.href = "../login.html";
+}
+
 // Tiêu đề trang (header)
 const titlePage = document.querySelector("#title-page");
 function getTitlePage(item) {

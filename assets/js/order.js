@@ -33,35 +33,45 @@ if (cart == null || Object.keys(cart).length == 0) {
 
 if (orderButton !== null) {
     orderButton.addEventListener("click", () => {
-        const data = JSON.parse(localStorage.getItem("cart"));
-        if (data !== null) {
-            const isConfirm = window.confirm(
-                "Vui lòng kiểm tra lại đơn hàng trước khi xác nhận. Bạn có chắc chắn muốn đặt hàng không?"
-            );
-            if (isConfirm) {
-                const info = {
-                    code: generateRandomString(6),
-                    createAt: new Date(),
-                    name: "Khách hàng mới",
-                    state: "Đang xử lý",
-                    payment: "Chưa thanh toán",
-                    delivery: "Đang giao hàng",
-                    total: totalPriceOrder,
-                };
-                const orders = JSON.parse(localStorage.getItem("orders"));
-                if (orders !== null) {
-                    localStorage.setItem(
-                        "orders",
-                        JSON.stringify([...orders, { data, info }])
-                    );
-                } else {
-                    localStorage.setItem(
-                        "orders",
-                        JSON.stringify([{ data, info }])
-                    );
+        // check login trước khi đặt hàng
+        var isLogin =
+            localStorage.getItem("tokenLogin") &&
+            localStorage.getItem("tokenLogin");
+        if (!isLogin) {
+            alert("Vui lòng đăng nhập để đặt hàng!");
+            window.location.replace("./login.html"); // đưa về trang login
+        } else {
+            const data = JSON.parse(localStorage.getItem("cart"));
+            if (data !== null) {
+                const isConfirm = window.confirm(
+                    "Vui lòng kiểm tra lại đơn hàng trước khi xác nhận. Bạn có chắc chắn muốn đặt hàng không?"
+                );
+                if (isConfirm) {
+                    alert("Đặt hàng thành công!");
+                    const info = {
+                        code: generateRandomString(6),
+                        createAt: new Date(),
+                        name: "Khách hàng mới",
+                        state: "Đang xử lý",
+                        payment: "Chưa thanh toán",
+                        delivery: "Đang giao hàng",
+                        total: totalPriceOrder,
+                    };
+                    const orders = JSON.parse(localStorage.getItem("orders"));
+                    if (orders !== null) {
+                        localStorage.setItem(
+                            "orders",
+                            JSON.stringify([...orders, { data, info }])
+                        );
+                    } else {
+                        localStorage.setItem(
+                            "orders",
+                            JSON.stringify([{ data, info }])
+                        );
+                    }
+                    localStorage.removeItem("cart");
+                    window.location.reload();
                 }
-                localStorage.removeItem("cartItems");
-                window.location.reload();
             }
         }
     });

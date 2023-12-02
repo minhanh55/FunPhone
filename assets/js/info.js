@@ -70,3 +70,9 @@ function seeMore() {
         moreText.style.display = "inline";
     }
 }
+
+// đặt lịch sửa chữa
+var booking = document.querySelector(".groupbtn__order");
+booking.addEventListener("click", function () {
+    window.location.href = "booking.html";
+});
