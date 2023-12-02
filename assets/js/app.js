@@ -4,7 +4,7 @@ $(document).ready(function () {
         slidesToShow: 5,
         speed: 300,
         autoplay: true,
-        autoplaySpeed: 1500,
+        autoplaySpeed: 1000,
         prevArrow:
             "<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
         nextArrow:

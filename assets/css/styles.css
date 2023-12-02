@@ -274,7 +274,7 @@ input:hover {
     font-weight: 500;
 }
 
-.product__price span {
+.product__price span:last-child {
     margin-left: 10px;
     text-decoration: line-through;
     color: #707070;
@@ -405,4 +405,54 @@ footer ul > li > a:hover {
     color: gray;
     font-weight: 300;
     font-size: small;
+}
+
+/* Quan ly san pham */
+.orders-management th {
+    font-weight: 600;
+}
+
+.orders-management img {
+    width: 100px;
+    aspect-ratio: 1/1;
+}
+
+.orders-management table {
+    width: 100%;
+}
+
+/* Cart  */
+.cart__list {
+    background-color: white;
+}
+
+.cart__list th {
+    font-weight: 600;
+}
+
+.cart__list img {
+    width: 100px;
+    aspect-ratio: 1/1;
+}
+
+.order-product {
+    background-color: #d70018;
+    color: white;
+    border: 0;
+    width: 20%;
+}
+
+.total-cost {
+    text-align: end;
+    color: #ff0724;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.total-cost span {
+    font-size: 24px;
+}
+
+.cart-main {
+    background-color: white;
 }

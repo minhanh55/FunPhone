@@ -68,6 +68,7 @@
                             <input
                                 placeholder="Bạn cần tìm gì?"
                                 type="search"
+                                id="search-product"
                                 class="input"
                             />
                         </div>
@@ -195,6 +196,7 @@
                         <input
                             placeholder="Bạn cần tìm gì?"
                             type="search"
+                            id="search-product"
                             class="input"
                         />
                     </div>
@@ -220,6 +222,38 @@
         </nav>
 
         <main>
+            <section
+                class="search-result container fix-phone__inner py-3 px-5 d-none"
+            >
+                <h2 class="col-lg-3 section__heading">KẾT QUẢ TÌM KIẾM</h2>
+                <div class="row">
+                    <!-- <div class="row search-result__product col-3" id="smartphones-list">
+                        <div class="col-lg product__item col-md-4 col-6 my-3">
+                            <div class="product__media">
+                                <img
+                                    src="./assets/img/man_hinh_iphone7plus.jpg"
+                                    alt=""
+                                    class="product__media-img"
+                                />
+                                <span class="product__media-note">
+                                    <p>BẢO HÀNH 6 THÁNG</p>
+                                    <p>Sửa 1 giờ</p>
+                                </span>
+                                <div class="product__media-promotion">-10%</div>
+                            </div>
+                            <div class="product__info">
+                                <h3>Thay màn hình iPhone 7 Plus chính hãng Pisen V3</h3>
+                                <div class="product__price">
+                                    <span>1350000</span><span class="line-through">1500000</span>
+                                </div>
+                                <p class="product__desc">
+                                    <strong>Tặng áo mưa khi thay pin, màn hình Pisen số lượng có hạn</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </section>
             <div class="container">
                 <div class="info info-product">
                     <h1 class="info__heading">
@@ -551,5 +585,6 @@
             <hr class="hr container-fluid" />
         </footer>
         <script src="./assets/js/info.js"></script>
+        <script src="./assets/js/search.js"></script>
     </body>
 </html>

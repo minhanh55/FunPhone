@@ -31,10 +31,11 @@ function renderProducts(products) {
             <div class="product__info">
                 <h3>${product.name}</h3>
                 <div class="product__price">
-                ${priceSale}<span>${new Intl.NumberFormat("de-DE", {
-                style: "currency",
-                currency: "VND",
-            }).format(product.price)}</span>
+                <span>${priceSale}</span>
+                <span>${new Intl.NumberFormat("de-DE", {
+                    style: "currency",
+                    currency: "VND",
+                }).format(product.price)}</span>
                 </div>
                 <p class="product__desc">
                     <strong>Tặng áo mưa khi thay pin, màn hình Pisen</strong>, số lượng có hạn
@@ -73,10 +74,11 @@ function renderProducts(products) {
             <div class="product__info">
                 <h3>${product.name}</h3>
                 <div class="product__price">
-                ${priceSale}<span>${new Intl.NumberFormat("de-DE", {
-                style: "currency",
-                currency: "VND",
-            }).format(product.price)}</span>
+                <span>${priceSale}</span>
+                <span>${new Intl.NumberFormat("de-DE", {
+                    style: "currency",
+                    currency: "VND",
+                }).format(product.price)}</span>
                 </div>
                 <p class="product__desc">
                     <strong>Tặng áo mưa khi thay pin, màn hình Pisen</strong>, số lượng có hạn
@@ -104,8 +106,10 @@ for (let i = 0; i < productItemLength; i++) {
         var productImage = productItem[i].querySelector(
             ".product__media-img"
         ).src;
-        var productPrice =
-            productItem[i].querySelector(".product__price").innerHTML;
+
+        var productPrice = productItem[i].querySelector(
+            ".product__price span:first-child"
+        ).innerHTML;
         // định dạng như vầy 989&nbsp;₫ tách productPrice để lấy số:
         var productPrice2 = productPrice.slice(0, productPrice.indexOf("₫"));
         if (productPrice2.includes("&")) {

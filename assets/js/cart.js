@@ -15,53 +15,70 @@ if (cart == null || Object.keys(cart).length == 0) {
 }
 
 for (var key in cart) {
-    var tr = document.createElement("tr");
-    tr.innerHTML = `
-        <td class="productInfo"><img style="width: 70px;" src="${cart[key].image}" alt=""><span class="productName">${cart[key].name}</span></td>
-        <td><span class="productPrice">${cart[key].price}</span><sup>đ</sup></td>
-        <td><input style="width: 50px; outline: none;" type="number" value="${cart[key].quantity}" min="1" class="quantity"></td>
-        <td style="cursor: pointer;"><span class="deleteProduct"><i class="fa-solid fa-trash"></i></span></td>
-    `;
-    // có thể thay đổi số lượng sản phẩm trong giỏ hàng
-    tr.querySelector(".quantity").onchange = function () {
-        var quantity = this.value;
-        var productName =
-            this.parentElement.parentElement.querySelector(
-                ".productName"
-            ).innerText;
-        for (var key in cart) {
-            if (cart[key].name == productName) {
-                cart[key].quantity = quantity;
-                localStorage.setItem("cart", JSON.stringify(cart));
-                location.reload();
-            }
-        }
-    };
-    // xóa sản phẩm trong giỏ hàng
-    tr.querySelector(".deleteProduct").onclick = function () {
-        var productName =
-            this.parentElement.parentElement.querySelector(
-                ".productName"
-            ).innerText;
-        for (var key in cart) {
-            if (cart[key].name == productName) {
-                delete cart[key];
-                localStorage.setItem("cart", JSON.stringify(cart));
-                location.reload();
-            }
-        }
-    };
-
-    tbody.appendChild(tr);
-    // kiểm tra không đúng định dạng tiền tệ thì chuyển đổi
-    if (!cart[key].price.includes(".")) {
-        cart[key].price = cart[key].price.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    var index = Object.keys(cart).indexOf(key);
+    var product = cart[key];
+    if (product.price.includes(".")) {
+        product.price = product.price.replace(/\./g, "");
     }
-    // tổng tiền
-    total += parseInt(cart[key].price.replace(/\./g, "")) * cart[key].quantity;
-    totalPrice.innerText = total + "đ";
-    totalPrice.innerText = totalPrice.innerText.replace(
-        /\B(?=(\d{3})+(?!\d))/g,
-        "."
-    );
+    total += product.price * product.quantity;
+
+    var price = product.price * product.quantity;
+    price = new Intl.NumberFormat("de-DE", {
+        style: "currency",
+        currency: "VND",
+    }).format(price);
+
+    // biến định dạng giá tiền
+    var priceFormat = new Intl.NumberFormat("de-DE", {
+        style: "currency",
+        currency: "VND",
+    }).format(product.price);
+
+    tbody.innerHTML += `
+        <tr>
+            <td>${index + 1}</td>
+            <td>${product.name}</td>
+            <td>
+                <img src="${product.image}" alt="" />
+            </td>
+            
+            <td>${priceFormat}</td>  
+            <td>
+                <button class="btn btn-success" onclick="decrease('${key}')">-</button>
+                <span>${product.quantity}</span>
+                <button class="btn btn-success" onclick="increase('${key}')">+</button>
+            </td>
+            <td>${price}</td>
+
+            <td>
+                <button class="btn btn-danger" onclick="remove('${key}')">Xoá</button>
+            </td>
+        </tr>
+    `;
+}
+
+total = new Intl.NumberFormat("de-DE", {
+    style: "currency",
+    currency: "VND",
+}).format(total);
+totalPrice.innerText = "Tổng thanh toán: " + total;
+
+function increase(key) {
+    cart[key].quantity += 1;
+    localStorage.setItem("cart", JSON.stringify(cart));
+    window.location.reload();
+}
+
+function decrease(key) {
+    if (cart[key].quantity > 1) {
+        cart[key].quantity -= 1;
+        localStorage.setItem("cart", JSON.stringify(cart));
+        window.location.reload();
+    }
+}
+
+function remove(key) {
+    delete cart[key];
+    localStorage.setItem("cart", JSON.stringify(cart));
+    window.location.reload();
 }

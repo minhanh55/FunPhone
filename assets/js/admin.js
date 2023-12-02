@@ -252,3 +252,92 @@ function handleDeleteProduct(id) {
     localStorage.setItem("products", JSON.stringify(products));
     renderProducts(products);
 }
+
+// Hiển thị order
+const ordersElement = document.querySelector(".orders-management");
+const orders = JSON.parse(localStorage.getItem("orders"));
+const contentContainer = ordersElement.querySelector(
+    ".orders-management__content"
+);
+
+const renderOrders = (orders) => {
+    let html = "";
+    for (const order of orders) {
+        order.info.createAt = new Date(order.info.createAt).toLocaleString();
+        html += `
+        <tr>
+            <td class="text-primary">${order.info.code}</td>
+            <td>${order.info.createAt}</td>
+            <td>${order.info.name}</td>
+            <td class="text-primary">${order.info.state}</td>
+            <td class="text-primary">${order.info.payment}</td>
+            <td class="text-primary">${order.info.delivery}</td>
+            <td class="text-danger">${order.info.total}</td>
+            <td>
+                <button
+                    class="btn btn-danger btn-sm"
+                    onclick="deleteOrder('${order.info.code}')"
+                >
+                    Xóa
+                </button>  
+            </td>
+        </tr>
+        <tr>
+            <td colspan="8">
+                <table
+                    class="table table-hover table-sm mt-3"
+                >
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Ảnh</th>
+                            <th>Giá</th>
+                            <th>Số lượng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${renderOrderItems(order.data)}
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        `;
+    }
+    contentContainer.innerHTML = html;
+};
+
+const renderOrderItems = (orderItems) => {
+    let html = "";
+    let i = 1;
+    for (const orderItem in orderItems) {
+        html += `
+        <tr>
+            <td>${i++}</td>
+            <td>${orderItems[orderItem].name}</td>
+            <td>
+                <img
+                    src="${orderItems[orderItem].image}"
+                    alt=""
+                    style="width: 50px"
+                />
+            </td>
+            <td>${orderItems[orderItem].price}₫</td>
+            <td>${orderItems[orderItem].quantity}</td>
+        </tr>
+        `;
+    }
+    return html;
+};
+
+renderOrders(orders);
+
+// xóa đơn hàng
+const deleteOrder = (code) => {
+    if (confirm("Bạn có chắc muốn xóa đơn hàng này?")) {
+        const index = orders.findIndex((order) => order.info.code === code);
+        orders.splice(index, 1);
+        localStorage.setItem("orders", JSON.stringify(orders));
+        renderOrders(orders);
+    }
+};
