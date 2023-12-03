@@ -98,10 +98,13 @@ function login() {
     const account = document.getElementById("account").value;
     const password = document.getElementById("password").value;
 
+    var dataUser = [];
     // lấy dữ liệu từ cả localStorage users và dữ liệu userAdmin
-    const dataUser = JSON.parse(localStorage.getItem("users")).concat(
-        userAdmin
-    );
+    if (JSON.parse(localStorage.getItem("users"))) {
+        dataUser = JSON.parse(localStorage.getItem("users")).concat(userAdmin);
+    } else {
+        dataUser = userAdmin;
+    }
 
     const checkUser = dataUser.find(
         (item) => item.account === account && item.password === password

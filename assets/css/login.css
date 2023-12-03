@@ -126,3 +126,8 @@ html {
     height: 600px;
     margin-bottom: 20px;
 }
+
+#notification {
+    /* position: absolute;
+    top: 70px; */
+}
