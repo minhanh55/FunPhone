@@ -24,10 +24,21 @@
         <!-- CSS -->
         <link rel="stylesheet" href="../assets/css/styles.css" />
         <link rel="stylesheet" href="../assets/css/admin.css" />
+        <link rel="stylesheet" href="../assets/css/responsive.css" />
     </head>
     <body>
+        <header class="offset-2" id="title-page">
+            <button class="btn btn-primary" id="sidebar_toggle">
+                <i class="fa fa-fw fa-bars"></i>
+            </button>
+
+            <div class="" style="margin-top: 5px"><h2>Trang Chủ</h2></div>
+        </header>
         <nav class="sidebar" id="nav">
-            <div class="nav__content">FunPhone</div>
+            <div class="nav__content">
+                <span>FunPhone</span>
+                <i class="fa-regular fa-circle-xmark" id="sidebar_close"></i>
+            </div>
             <ul class="nav nav-pills flex-column nav__list">
                 <li class="nav__item">
                     <div class="nav-link nav__link active">
@@ -81,8 +92,7 @@
         </nav>
 
         <main>
-            <div class="offset-2" id="title-page"><h2>Trang Chủ</h2></div>
-            <div class="offset-2 item-content col-lg-10">
+            <div class="offset-2 item-content">
                 <div class="item-pane active">
                     <div class="container"></div>
                 </div>
@@ -168,12 +178,12 @@
                     >
                         <thead class="table-dark">
                             <tr>
-                                <th>Mã đơn hàng</th>
+                                <th class="mobile-none">Mã đơn hàng</th>
                                 <th>Ngày tạo</th>
-                                <th>Khách hàng</th>
-                                <th>Trạng thái đơn hàng</th>
+                                <th class="mobile-none">Khách hàng</th>
+                                <th>Trạng thái</th>
                                 <th>Thanh toán</th>
-                                <th>Giao hàng</th>
+                                <th class="mobile-none">Giao hàng</th>
                                 <th>Tổng tiền</th>
                                 <th>Thao tác</th>
                             </tr>
@@ -234,6 +244,5 @@
         </main>
         <script src="../assets/js/user.js"></script>
         <script src="../assets/js/admin.js"></script>
-        <script src="../assets/js/showorders.js"></script>
     </body>
 </html>

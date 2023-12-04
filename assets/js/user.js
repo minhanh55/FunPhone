@@ -65,9 +65,9 @@ if (isLogin) {
     >
         <div class="col-3">
             <div class="fs-1 text-light">
-                <i
-                    class="fa fa-shopping-cart header-icon"
-                ></i>
+            <i
+                class="fa fa-user header-icon"
+            ></i>
             </div>
         </div>
         <div class="col-9">

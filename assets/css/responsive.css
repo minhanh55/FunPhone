@@ -1,6 +1,8 @@
 /* PC */
 @media screen and (min-width: 992px) {
-    .header-mobile {
+    .header-mobile,
+    #sidebar_toggle,
+    #sidebar_close {
         display: none;
     }
 }
@@ -27,6 +29,14 @@
     .features__img {
         border: 2px solid red;
         border-radius: 50%;
+    }
+
+    .sidebar {
+        display: none;
+    }
+    #title-page,
+    .item-content {
+        margin-left: 10px;
     }
 }
 /* Tablet */
@@ -161,5 +171,38 @@
 
     .info__left-list {
         display: none;
+    }
+
+    .form {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .cart-main {
+        margin-top: 100px;
+    }
+
+    .booking {
+        width: auto;
+    }
+
+    .cart__totle-money {
+        display: none;
+    }
+
+    .total-cost .groupbtn__order {
+        min-width: 100px;
+        height: 50px;
+    }
+
+    #tab-products .product__media-img {
+        max-width: 135px;
+        object-fit: cover;
+    }
+
+    .product-item {
+        width: 45%;
+        padding: 10px 1px;
     }
 }

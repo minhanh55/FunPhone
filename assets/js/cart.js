@@ -36,23 +36,28 @@ for (var key in cart) {
 
     tbody.innerHTML += `
         <tr>
-            <td>${index + 1}</td>
-            <td>${product.name}</td>
-            <td>
-                <img src="${product.image}" alt="" />
-            </td>
-            
-            <td>${priceFormat}</td>  
-            <td>
-                <button class="btn btn-success" onclick="decrease('${key}')">-</button>
-                <span>${product.quantity}</span>
-                <button class="btn btn-success" onclick="increase('${key}')">+</button>
-            </td>
-            <td>${price}</td>
-
-            <td>
-                <button class="btn btn-danger" onclick="remove('${key}')">Xoá</button>
-            </td>
+            <td class="cart__info-product">
+                <div class="cart__info-product-top">
+                    <span>${index + 1}</span>
+                    <img src="${product.image}" alt="" />
+                </div>
+                <div class="cart__info-product-bottom">
+                    <div class="cart__info-product-item">
+                        <span class="cart__info-name">${product.name}</span>
+                        <span class="cart__info-price">${priceFormat}</span>
+                    </div>
+                    <div class="cart__info-product-item">
+                        <button class="btn btn-delect">
+                            <i class="fa-solid fa-trash-can" onclick="remove('${key}')"></i>
+                        </button>
+                        <div class="control-quantity">
+                            <button class="btn btn-success" onclick="decrease('${key}')">-</button>
+                            <span>${product.quantity}</span>
+                            <button class="btn btn-success" onclick="increase('${key}')">+</button>
+                        </div>
+                    </div>
+                </div>
+            </td>    
         </tr>
     `;
 }

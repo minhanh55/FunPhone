@@ -4,6 +4,11 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Phone</title>
+        <link
+            rel="shortcut icon"
+            href="./assets/img/favicon.png"
+            type="image/x-icon"
+        />
         <!-- Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -157,7 +162,7 @@
                                     <div class="col-3">
                                         <div class="fs-1 text-light">
                                             <i
-                                                class="fa fa-shopping-cart header-icon"
+                                                class="fa fa-user header-icon"
                                             ></i>
                                         </div>
                                     </div>
@@ -212,146 +217,27 @@
         </header>
         <main class="cart-main">
             <div class="cart-container container">
-                <h2 class="section__heading ms-3 my-2">Giỏ hàng</h2>
                 <div class="cart__list container mt-4">
+                    <h2 class="section__heading ms-3 my-2">Giỏ hàng</h2>
                     <table class="table table-hover table-sm mt-3">
-                        <thead>
-                            <tr>
-                                <th>STT</th>
-                                <th>Tên sản phẩm</th>
-                                <th>Hình ảnh</th>
-                                <th>Giá</th>
-                                <th>Số lượng</th>
-                                <th>Thành tiền</th>
-                                <th>Thao tác</th>
-                            </tr>
-                        </thead>
-                        <tbody class="cart__content">
-                            <!-- <tr>
-                                <td>
-                                    <input 
-                                        type="checkbox"
-                                        name="id"
-                                        value="1"
-                                    >
-                                </td>
-                                <td>1</td>
-                                <td>tensanpham</td>
-                                <td>
-                                    <img src="http://127.0.0.1:5500/assets/img/manhinh_xsmax.png" alt="">
-                                </td>
-                                <td>213122</td>
-                                <td>2</td>
-                                <td>
-                                    <button type="button" class="btn btn-danger btn-lg delete-btn">Xoá</button>
-                                </td>
-                            </tr> -->
-                        </tbody>
+                        <tbody class="cart__content"></tbody>
                     </table>
-                </div>
-                <div
-                    class="info__right-groupbtn row d-flex justify-content-around align-items-center my-5 me-1"
-                >
-                    <div class="total-cost money">
-                        <h2 class="price-total">Tổng thanh toán:</h2>
-                        <button
-                            class="groupbtn__order col-lg-6 col-md-6 col py-3 order-product"
-                        >
-                            <i class="fa fa-calendar"></i> ĐẶT HÀNG
-                        </button>
+                    <div
+                        class="info__right-groupbtn row d-flex justify-content-around align-items-center my-5 me-1"
+                    >
+                        <div class="total-cost money">
+                            <h2 class="price-total">Tổng thanh toán:</h2>
+                            <button
+                                class="groupbtn__order col-lg-6 col-md-6 col py-3 order-product"
+                            >
+                                <i class="fa fa-calendar"></i> ĐẶT HÀNG
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
-        <footer id="footer" class="footer bg-light pt-3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h2>HỆ THỐNG CỬA HÀNG</h2>
-                        <ul class="colum1">
-                            <li>
-                                Tổng đài miễn phí:
-                                <a href="tel:0123456789">0123456789</a>
-                            </li>
-                            <li>
-                                Email:
-                                <a href="mailto:your-email@gmail.com"
-                                    >your-email@gmail.com</a
-                                >
-                            </li>
-                            <li>
-                                Thời gian phục vụ: <b>08:00 – 21:00</b> hàng
-                                ngày (cả Chủ nhật &amp; ngày lễ)
-                            </li>
-                            <li class="block1">
-                                <a href="#"
-                                    >Tìm đến cửa hàng FunPhone gần nhất</a
-                                >
-                            </li>
-                            <li class="block2">
-                                <a href="#">Dịch vụ cho khách hàng ở xa</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <h2>THÔNG TIN HỖ TRỢ</h2>
-                        <ul id="" class="">
-                            <li id="" class="">
-                                <a href="#">Tin tức công nghệ</a>
-                            </li>
-                            <li><a href="#">Thủ thuật sửa chữa</a></li>
-                            <li><a href="#">Chính sách bảo hành</a></li>
-                            <li><a href="#">Liên hệ với chúng tôi</a></li>
-                            <li><a href="#">Khách hàng Doanh nghiệp</a></li>
-                            <li><a href="#">Kiểm tra bảo hành</a></li>
-                            <!-- <li style="display: none;"><a href="#">Kiểm tra bảo hành</a></li>
-                            <li style="display: none;"><a href="#">Chính sách bảo mật</a></li>
-                            <li style="display: none;"><a href="#">Chính sách sử dụng</a></li>
-                            <li style="display: none;"><a href="#">Quy định sao lưu dữ liệu</a></li>
-                            <li style="display: none;"><a href="#">Về việc lưu trữ thiết bị</a></li>
-                            <li class="devvn_last" style="display: block"><a href="javascript:void(0)">Xem thêm <span class="devvn_icon_down"></span></a></li> -->
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <h2>KẾT NỐI VỚI CHÚNG TÔI</h2>
-                        <ul id="" class="">
-                            <li id="" class="">
-                                <a href="#">Sơ đồ Website</a>
-                            </li>
-                            <li id="" class=""><a href="#">Khuyến mại</a></li>
-                            <li id="" class=""><a href="#">Tuyển dụng</a></li>
-                            <li id="" class="">
-                                <a href="#">Dạy nghề sửa chữa</a>
-                            </li>
-                            <li id="" class="">
-                                <a href="#">Giới thiệu FunPhone</a>
-                            </li>
-                            <li id="" class="">
-                                <a href="#">Hợp tác kinh doanh</a>
-                            </li>
-                            <!-- <li id="" class="" style="display: none;"><a href="#">Hợp tác kinh doanh</a></li>
-                            <li id="" class="" style="display: none;"><a href="#">Dịch vụ nhận sửa Điện Thoại – Máy tính tại nhà</a></li>
-                            <li class="" style="display: block"><a href="javascript:void(0)">Xem thêm <span class="devvn_icon_down"></span></a></li> -->
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <hr class="hr container-fluid" />
-            <div class="container">
-                <div class="row lastfooter">
-                    <div
-                        class="col-md-12 absolute-footer light medium-text-center text-center"
-                    >
-                        Bản quyền 2021 - © Dịch vụ sửa chữa FunPhone - GPDKKD:
-                        xxx do sở KH &amp; ĐT TP.HCM cấp ngày xx/xx/xxxx
-                        <br />
-                        Địa chỉ: quận 1, TP Hồ Chí Minh - Điện thoại: 0123456789
-                        - Email: your-email@gmail.com
-                    </div>
-                </div>
-            </div>
-            <hr class="hr container-fluid" />
-        </footer>
+
         <script src="./assets/js/cart.js"></script>
         <script src="./assets/js/order.js"></script>
         <script src="./assets/js/search.js"></script>

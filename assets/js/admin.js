@@ -12,13 +12,28 @@ if (localStorage.getItem("tokenLogin")) {
 }
 
 // Tiêu đề trang (header)
-const titlePage = document.querySelector("#title-page");
+const titlePage = document.querySelector("#title-page div");
 function getTitlePage(item) {
     var htmls = `
         <h2>${item.textContent}</h2>
     `;
     titlePage.innerHTML = htmls;
 }
+
+// Đóng mở sidebar
+var sidebar = document.querySelector("#nav");
+var sidebarToggle = document.querySelector("#sidebar_toggle");
+var sidebarClose = document.querySelector("#sidebar_close");
+
+sidebarToggle.onclick = function () {
+    console.log(1);
+    sidebar.classList.remove("active");
+    sidebar.classList.add("active");
+};
+
+sidebarClose.onclick = function () {
+    sidebar.classList.remove("active");
+};
 
 // Action item
 const navItems = document.querySelectorAll(".nav__link");
@@ -88,7 +103,8 @@ function createProduct() {
 
             alert("Thêm sản phẩm thành công!");
             resetValue();
-            infoAddProduct.classList.toggle("active");
+            infoAddProduct.classList.remove("active");
+
             renderProducts(products);
         };
         reader.readAsDataURL(productImage);
@@ -112,7 +128,7 @@ function renderProducts(products) {
             <div class="product-item product-item-${index}">
                 <h4>${product.name}</h4>
                 <img
-                    src="${product.image}"
+                    src=".${product.image}"
                     alt="Sản phẩm ${index}"
                     class="product__media-img"
                 />
@@ -193,7 +209,7 @@ function handleUpdateProduct(id) {
                         required=""
                         class="input"
                         accept="image/*"
-                        value="${product.image}"
+                        value=".${product.image}"
                     />
                     <div class="group-button">
                         <button class="btn button" id="save">Save</button>
@@ -279,12 +295,12 @@ const renderOrders = (orders) => {
         order.info.createAt = new Date(order.info.createAt).toLocaleString();
         html += `
         <tr>
-            <td class="text-primary">${order.info.code}</td>
+            <td class="text-primary mobile-none">${order.info.code}</td>
             <td>${order.info.createAt}</td>
-            <td>${order.info.name}</td>
+            <td class="mobile-none">${order.info.name}</td>
             <td class="text-primary">${order.info.state}</td>
             <td class="text-primary">${order.info.payment}</td>
-            <td class="text-primary">${order.info.delivery}</td>
+            <td class="text-primary mobile-none">${order.info.delivery}</td>
             <td class="text-danger">${order.info.total}</td>
             <td>
                 <button
@@ -303,7 +319,7 @@ const renderOrders = (orders) => {
                     <thead>
                         <tr>
                             <th>STT</th>
-                            <th>Tên sản phẩm</th>
+                            <th>Sản phẩm</th>
                             <th>Ảnh</th>
                             <th>Giá</th>
                             <th>Số lượng</th>

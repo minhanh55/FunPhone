@@ -34,7 +34,7 @@ if (productListElement) {
         data.push(productItem);
     });
 
-    const searchInput = document.querySelector("#search-product");
+    var searchInput = document.querySelector("#search-product");
     searchInput.addEventListener("keyup", (e) => {
         if (e.key == "Enter") {
             performSearch(searchInput.value);

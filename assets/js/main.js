@@ -1,3 +1,96 @@
+// Kiểm tra trong local storage products chưa, nếu chưa có thì thêm vào
+var products = JSON.parse(localStorage.getItem("products")) || [];
+if (products.length === 0) {
+    products = [
+        {
+            name: "Màn hình chính hãng GX thay cho iPhone Xs Max",
+            type: "smartphone",
+            price: "3500000",
+            promotion: "29",
+            image: "./assets/img/product/mangx.png",
+        },
+        {
+            name: "Thay màn hình Samsung Galaxy Note 20 Ultra",
+            type: "smartphone",
+            price: "4900000",
+            promotion: "20",
+            image: "./assets/img/product/thay-man-hinh-samsung-galaxy-note-20-ultra.png",
+        },
+        {
+            name: "Thay màn hình Samsung Galaxy A71",
+            type: "smartphone",
+            price: "1700000",
+            promotion: "10",
+            image: "./assets/img/product/mansamsunga71.png",
+        },
+        {
+            name: "Pin chính hãng Pisen thay cho iPhone 12 Pro Max",
+            type: "smartphone",
+            price: "1300000",
+            promotion: "10",
+            image: "./assets/img/product/pin12promax.png",
+        },
+        {
+            name: "Pin siêu cao chính hãng Pisen thay cho iPhone 7 Plus",
+            type: "smartphone",
+            price: "1080000",
+            promotion: "31",
+            image: "./assets/img/product/piniphone7plus.png",
+        },
+        {
+            name: "Pin siêu cao chính hãng Pisen thay cho iPhone X",
+            type: "smartphone",
+            price: "1430000",
+            promotion: "41",
+            image: "./assets/img/product/piniphonex.png",
+        },
+        {
+            name: "Sửa bản lề laptop",
+            type: "laptop",
+            price: "550000",
+            promotion: "5",
+            image: "./assets/img/product/banle.png",
+        },
+        {
+            name: "Thay ổ cứng SSD Kingston 480GB SA400 SATA",
+            type: "laptop",
+            price: "1500000",
+            promotion: "47",
+            image: "./assets/img/product/480GB.png",
+        },
+        {
+            name: "Thay ổ cứng SSD Kingston 240GB SA400",
+            type: "laptop",
+            price: "1000000",
+            promotion: "35",
+            image: "./assets/img/product/240GB.png",
+        },
+        {
+            name: "Thay Pin Laptop HP Pavilion X360 14 CD0522SA",
+            type: "laptop",
+            price: "1600000",
+            promotion: "5",
+            image: "./assets/img/product/thay-pin-laptop-hp-pavilion.png",
+        },
+        {
+            name: "Pin chính hãng Pisen thay cho MacBook Pro",
+            type: "laptop",
+            price: "2890000",
+            promotion: "14",
+            image: "./assets/img/product/macpro13.png",
+        },
+
+        {
+            name: "Thay RAM laptop Kingston DDR4 16GB Bus 3200",
+            type: "laptop",
+            price: "1350000",
+            promotion: "10",
+            image: "./assets/img/product/RAM-Kingston-16GB-3200.png",
+        },
+    ];
+    localStorage.setItem("products", JSON.stringify(products));
+}
+
 var products = JSON.parse(localStorage.getItem("products")) || [];
 
 renderProducts(products);

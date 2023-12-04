@@ -147,15 +147,15 @@ hr {
     background-color: red;
     border: 2px solid red;
     color: white;
-    padding: 15px;
     margin: 7px;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 15px;
     cursor: pointer;
     border-radius: 12px;
     height: 70px;
     font-weight: 700;
+    text-wrap: nowrap;
 }
 
 .groupbtn__cart {

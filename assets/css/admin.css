@@ -158,6 +158,10 @@ main {
     border-right: 0.5px solid #ccc;
 }
 
+.sidebar.active {
+    display: block;
+}
+
 .nav__content {
     padding: 5px;
     margin-bottom: 10px;
@@ -168,7 +172,17 @@ main {
     color: #fff;
 }
 
-.nav__list {
+#sidebar_toggle {
+    padding: 8px 10px;
+}
+
+#sidebar_close {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    font-size: 17px;
+    color: #fff;
+    cursor: pointer;
 }
 
 .nav__item {
