@@ -34,11 +34,13 @@ if (productListElement) {
         data.push(productItem);
     });
 
-    var searchInput = document.querySelector("#search-product");
-    searchInput.addEventListener("keyup", (e) => {
-        if (e.key == "Enter") {
-            performSearch(searchInput.value);
-        }
+    var searchInput = document.querySelectorAll(".search-product");
+    searchInput.forEach((input) => {
+        input.addEventListener("keyup", (e) => {
+            if (e.key == "Enter") {
+                performSearch(input.value);
+            }
+        });
     });
 
     function performSearch(keyword) {

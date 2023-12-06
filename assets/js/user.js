@@ -111,7 +111,13 @@ function login() {
     );
     if (checkUser) {
         localStorage.setItem("tokenLogin", JSON.stringify(checkUser));
-        window.location.href = "./index.html";
+        // hiện thông báo đăng nhập thành công, 0.5s tự đóng
+        showNotification("alert-success", "Đăng nhập thành công");
+        setTimeout(() => {
+            window.location.href = "./index.html";
+        }, 500);
+
+        // window.location.href = "./index.html";
     } else {
         showNotification(
             "alert-danger",

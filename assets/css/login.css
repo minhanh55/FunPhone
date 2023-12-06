@@ -128,6 +128,19 @@ html {
 }
 
 #notification {
-    /* position: absolute;
-    top: 70px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 100px;
+    height: 50px;
+    right: 32px;
+    background: #eae6e6;
+    color: red;
+    font-weight: 700;
+    width: 300px;
+}
+
+#contentNotification {
+    width: 85%;
 }
