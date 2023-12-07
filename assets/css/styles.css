@@ -168,6 +168,29 @@ input:hover {
     border-radius: 5px;
 }
 
+.sub-menu {
+    display: none;
+    max-width: 147px;
+    position: absolute;
+    top: 53px;
+    background-color: #eee;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 35%);
+    z-index: 100;
+}
+
+.sub-menu li a {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 10px 0;
+}
+
+.header__item:hover .sub-menu {
+    display: block;
+}
+
 /* Brand */
 .brand {
     margin-top: 20px;

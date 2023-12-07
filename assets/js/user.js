@@ -1,18 +1,14 @@
 const isLogin =
     localStorage.getItem("tokenLogin") && localStorage.getItem("tokenLogin");
-// Check đăng nhập
-function checkLogin() {
-    if (!isLogin) {
-        window.location.replace("./login.html"); // đưa về trang login
-    } else {
-        window.location.replace("./index.html"); // đưa vào trang giả hàng
-        var user = JSON.parse(localStorage.getItem("user"));
-        var userBlock = document.querySelector(".header-check");
+
+// Có đăng nhập thì hiện ra user
+if (isLogin) {
+    var user = JSON.parse(localStorage.getItem("tokenLogin"));
+    var userBlock = document.querySelector(".header-check");
+    var userBlockMobile = document.querySelector(".header-check-mobile");
+    if (user.isAdmin === true) {
         userBlock.innerHTML = `
-        <div
-            class="row header__item"
-            onclick="logout()"
-        >
+        <div class="row header__item">
             <div class="col-3">
                 <div class="fs-1 text-light">
                     <i
@@ -23,67 +19,134 @@ function checkLogin() {
             <div class="col-9">
                 <div class="col-9">
                     <strong class="subheader"
-                        >Đăng xuất</strong
+                        >Tài khoản</strong
                     >
                 </div>
             </div>
+            <ul class="sub-menu">
+                <li class="sub-menu-admin">
+                    <a href="admin">
+                        <i
+                            class="fa-solid fa-circle-user"
+                        ></i>
+                        Trang Admin</a
+                    >
+                </li>
+                <hr />
+                <li>
+                    <a href="" onclick="logout()">
+                        <i
+                            class="fa-solid fa-right-from-bracket"
+                        ></i>
+                        Đăng xuất</a
+                    >
+                </li>
+            </ul>
+        </div>
+        `;
+
+        userBlockMobile.innerHTML = `
+        <div class="row header__item">
+            <div class="col-3">
+                <div class="fs-1 text-light">
+                    <i
+                        class="fa fa-user header-icon"
+                    ></i>
+                </div>
+            </div>
+            <div class="col-9">
+                <strong class="subheader"
+                    >Tài khoản</strong
+                >
+            </div>
+            <ul class="sub-menu">
+                <li class="sub-menu-admin">
+                    <a href="admin">
+                        <i
+                            class="fa-solid fa-circle-user"
+                        ></i>
+                        Trang Admin</a
+                    >
+                </li>
+                <hr />
+                <li>
+                    <a href="" onclick="logout()">
+                        <i
+                            class="fa-solid fa-right-from-bracket"
+                        ></i>
+                        Đăng xuất</a
+                    >
+                </li>
+            </ul>
+        </div>
+        `;
+    } else {
+        userBlock.innerHTML = `
+        <div class="row header__item">
+            <div class="col-3">
+                <div class="fs-1 text-light">
+                    <i
+                        class="fa fa-user header-icon"
+                    ></i>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="col-9">
+                    <strong class="subheader"
+                        >Tài khoản</strong
+                    >
+                </div>
+            </div>
+            <ul class="sub-menu">
+                <li>
+                    <a href="" onclick="logout()">
+                        <i
+                            class="fa-solid fa-right-from-bracket"
+                        ></i>
+                        Đăng xuất</a
+                    >
+                </li>
+            </ul>
+        </div>
+        `;
+
+        userBlockMobile.innerHTML = `
+        <div class="row header__item">
+            <div class="col-3">
+                <div class="fs-1 text-light">
+                    <i
+                        class="fa fa-user header-icon"
+                    ></i>
+                </div>
+            </div>
+            <div class="col-9">
+                <strong class="subheader"
+                    >Tài khoản</strong
+                >
+            </div>
+            <ul class="sub-menu">
+                <li>
+                    <a href="" onclick="logout()">
+                        <i
+                            class="fa-solid fa-right-from-bracket"
+                        ></i>
+                        Đăng xuất</a
+                    >
+                </li>
+            </ul>
         </div>
         `;
     }
 }
 
-// Có đăng nhập thì hiện ra user
-if (isLogin) {
-    var user = JSON.parse(localStorage.getItem("user"));
-    var userBlock = document.querySelector(".header-check");
-    var userBlockMobile = document.querySelector(".header-check-mobile");
-    userBlock.innerHTML = `
-    <div
-        class="row header__item"
-        onclick="logout()"
-    >
-        <div class="col-3">
-            <div class="fs-1 text-light">
-                <i
-                    class="fa fa-user header-icon"
-                ></i>
-            </div>
-        </div>
-        <div class="col-9">
-            <div class="col-9">
-                <strong class="subheader"
-                    >Đăng xuất</strong
-                >
-            </div>
-        </div>
-    </div>   
-    `;
-    userBlockMobile.innerHTML = `
-    <div
-        class="row header__item"
-        onclick="logout()"
-    >
-        <div class="col-3">
-            <div class="fs-1 text-light">
-            <i
-                class="fa fa-user header-icon"
-            ></i>
-            </div>
-        </div>
-        <div class="col-9">
-            <strong class="subheader"
-                >Đăng xuất</strong
-            >
-        </div>
-    </div>`;
-}
-
 function showNotification(className, content) {
+    document.getElementById("notification").style.display = "flex";
     document.getElementById("notification").classList.add(className);
     document.getElementById("contentNotification").innerText = content;
     setTimeout(() => {
         document.getElementById("notification").classList.remove(className);
         document.getElementById("contentNotification").innerText = "";
+        document.getElementById("notification").style.display = "none";
     }, 3000);
 }
 
